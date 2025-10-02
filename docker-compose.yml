@@ -1,0 +1,25 @@
+
+services:
+  # Define o serviço do nosso banco de dados
+  db:
+    image: postgres:15 # Usa a imagem oficial do PostgreSQL, versão 15
+    container_name: agenda_avulto_db # Nome do container
+    restart: always # Sempre reinicia o container se ele parar
+    
+    # Variáveis de ambiente para configurar o banco de dados
+    environment:
+      - POSTGRES_DB=agenda_avulto
+      - POSTGRES_USER=avulto_admin
+      - POSTGRES_PASSWORD=84661341 # <-- MUDE ISSO!
+    
+    # Mapeia a porta 5432 do container para a porta 5432 da sua máquina
+    ports:
+      - "5432:5432"
+    
+    # Garante que os dados sejam salvos mesmo que o container seja removido
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+# Define o volume para persistência de dados
+volumes:
+  postgres_data:
