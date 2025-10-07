@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, TrendingUp, Clock, Heart } from "lucide-react";
+import professionalImage from "@/assets/professional-scheduling.jpg";
+import growthImage from "@/assets/business-growth.jpg";
 
 const Benefits = () => {
   const benefits = [
@@ -34,9 +36,9 @@ const Benefits = () => {
   ];
 
   return (
-    <section id="benefits" className="py-20">
-      <div className="container px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section id="benefits" className="py-24 bg-background">
+      <div className="container px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-4">
@@ -104,8 +106,26 @@ const Benefits = () => {
               ))}
             </div>
 
+            {/* Image Grid */}
+            <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="rounded-lg overflow-hidden shadow-medium">
+                <img 
+                  src={professionalImage} 
+                  alt="Profissional gerenciando agendamentos pelo smartphone"
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-medium">
+                <img 
+                  src={growthImage} 
+                  alt="Crescimento e sucesso do negócio"
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+            </div>
+
             {/* Highlight Card */}
-            <Card className="border-2 border-primary/20 bg-gradient-accent">
+            <Card className="border-2 border-warning/30 bg-gradient-to-br from-warning/5 to-success/5">
               <CardContent className="p-6">
                 <div className="space-y-3">
                   <h4 className="text-lg font-semibold text-foreground">
@@ -114,7 +134,10 @@ const Benefits = () => {
                   <p className="text-muted-foreground">
                     Primeiros 30 dias gratuitos + desconto especial para novos usuários.
                   </p>
-                  <Button variant="outline" className="w-full">
+                  <Button 
+                    className="w-full bg-warning hover:bg-warning/90 text-warning-foreground"
+                    onClick={() => window.location.href = '/cadastro'}
+                  >
                     Aproveitar Oferta
                   </Button>
                 </div>

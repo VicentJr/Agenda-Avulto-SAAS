@@ -61,10 +61,10 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-20 bg-muted/30">
-      <div className="container px-4 md:px-6">
+    <section id="features" className="py-24 bg-muted/30">
+      <div className="container px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center space-y-4 mb-16">
+        <div className="text-center space-y-6 mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Funcionalidades que
             <span className="block bg-gradient-primary bg-clip-text text-transparent">
@@ -78,7 +78,7 @@ const Features = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <Card key={index} className="border-border hover:shadow-medium transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">

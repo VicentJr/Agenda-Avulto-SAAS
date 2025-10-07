@@ -4,12 +4,12 @@ import heroImage from "@/assets/hero-scheduling.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden py-12">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-hero opacity-5" />
       
-      <div className="container px-4 md:px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="container px-4 md:px-6 lg:px-8 relative z-10 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div className="space-y-8">
             {/* Badge */}
@@ -69,10 +69,19 @@ const Hero = () => {
 
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-primary hover:opacity-90 transition-opacity text-lg px-8" onClick={() => window.location.href = '/cadastro'}>
+              <Button 
+                size="lg" 
+                className="bg-warning hover:bg-warning/90 text-warning-foreground text-lg px-8 shadow-lg hover:shadow-xl transition-all transform hover:scale-105" 
+                onClick={() => window.location.href = '/cadastro'}
+              >
                 Começar Gratuitamente
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8" onClick={() => window.location.href = '/contato'}>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="text-lg px-8 border-2" 
+                onClick={() => window.location.href = '/contato'}
+              >
                 Ver Demonstração
               </Button>
             </div>
