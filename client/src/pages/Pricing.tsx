@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, Star, Zap, Crown } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Pricing = () => {
   const plans = [
@@ -48,7 +50,9 @@ const Pricing = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
+      <Header />
+      
+      {/* Page Header */}
       <div className="border-b bg-background/95 backdrop-blur">
         <div className="container py-16 px-4 md:px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -62,7 +66,7 @@ const Pricing = () => {
       </div>
 
       {/* Pricing Cards */}
-      <div className="container py-16 px-4 md:px-6">
+      <div className="container py-20 px-4 md:px-6 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {plans.map((plan, index) => (
             <Card 
@@ -181,18 +185,26 @@ const Pricing = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-20 text-center bg-gradient-subtle rounded-2xl p-12">
+        <div className="mt-20 text-center bg-gradient-hero/10 rounded-2xl p-12 border border-primary/20">
           <h2 className="text-3xl font-bold text-foreground mb-4">
             Pronto para Transformar Sua Agenda?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Junte-se a centenas de profissionais que já modernizaram seus agendamentos.
+            Comece hoje mesmo e aproveite 7 dias grátis!
           </p>
-          <Button size="lg" className="bg-gradient-primary hover:shadow-elegant transition-all duration-300">
-            Começar Teste Grátis
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-gradient-primary hover:shadow-elegant transition-all duration-300">
+              Começar Teste Grátis
+            </Button>
+            <Button variant="outline" size="lg">
+              Falar com Especialista
+            </Button>
+          </div>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };

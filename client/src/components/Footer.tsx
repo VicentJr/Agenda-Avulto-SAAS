@@ -19,7 +19,7 @@ const Footer = () => {
               beleza, saúde e bem-estar.
             </p>
             <div className="flex gap-2">
-              <Button variant="outline" size="sm" className="border-background/20 text-background hover:bg-background hover:text-foreground">
+              <Button variant="outline" size="sm" className="border-background/20 text-background hover:bg-background hover:text-foreground" onClick={() => window.location.href = '/cadastro'}>
                 Começar Grátis
               </Button>
             </div>
@@ -29,10 +29,10 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-background">Produto</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors">Funcionalidades</a></li>
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors">Preços</a></li>
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors">Integrações</a></li>
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors">API</a></li>
+              <li><a href="/#features" className="text-background/70 hover:text-background transition-colors">Funcionalidades</a></li>
+              <li><a href="/precos" className="text-background/70 hover:text-background transition-colors">Preços</a></li>
+              <li><a href="/contato" className="text-background/70 hover:text-background transition-colors">Contato</a></li>
+              <li><a href="/cadastro" className="text-background/70 hover:text-background transition-colors">Começar Grátis</a></li>
             </ul>
           </div>
 

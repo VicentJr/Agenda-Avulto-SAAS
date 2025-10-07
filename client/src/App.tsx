@@ -8,6 +8,9 @@ import Dashboard from "./pages/Dashboard";
 import Calendar from "./pages/Calendar";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import ClientArea from "./pages/ClientArea";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +27,9 @@ const App = () => (
           <Route path="/agenda" element={<Calendar />} />
           <Route path="/precos" element={<Pricing />} />
           <Route path="/contato" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/cadastro" element={<Signup />} />
+          <Route path="/area-cliente" element={<ClientArea />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -69,10 +69,10 @@ const Hero = () => {
 
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-primary hover:opacity-90 transition-opacity text-lg px-8">
+              <Button size="lg" className="bg-gradient-primary hover:opacity-90 transition-opacity text-lg px-8" onClick={() => window.location.href = '/cadastro'}>
                 Começar Gratuitamente
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8">
+              <Button variant="outline" size="lg" className="text-lg px-8" onClick={() => window.location.href = '/contato'}>
                 Ver Demonstração
               </Button>
             </div>
